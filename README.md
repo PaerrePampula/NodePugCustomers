@@ -7,7 +7,7 @@ It simply allows the client to save info about imaginary customers (firstname, l
  the node client itself, so the info will only be saved during the runtime of the program.
 
 The "database" infact is simply a javascript array of some preset info and added info
-#How does it work?
+# How does it work?
 
 This runs on node js so the first requirement is to install npm and node js
 
