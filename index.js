@@ -27,7 +27,7 @@ app.post("/addcustomer", (req, res) =>
     customers = [...customers, newCustomer];
     res.redirect("/");
 });
-app.listen(port, () => 
+app.listen(process.env.port || 3000, () => 
 {
   console.log(`Server is running on port ${port}.`);
 });
