@@ -15,16 +15,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => 
 {
-    res.render("movielist", {movies: movies});
+    res.render("customerlist", {customers: customers});
 });
 app.get("/addcustomer", (req, res) => 
 {
-    res.render("addmovie");
+    res.render("addcustomer");
 });
 app.post("/addcustomer", (req, res) => 
 {
     const newCustomer = {id: new Date().now, firstname : req.body.firstname, lastname : req.body.lastname, email : req.body.email, phone : req.body.phone };
-    movies = [...customers, newCustomer];
+    customers = [...customers, newCustomer];
     res.redirect("/");
 });
 app.listen(port, () => 
